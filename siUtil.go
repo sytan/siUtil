@@ -245,7 +245,7 @@ func SetCodeMemory(buf []byte, nStartAddress uint32, nLength uint32, nDisableDia
 	return int32(r)
 }
 
-// SetTargetGo implements Puts the target C8051Fxxx device in a â€œRunâ€?state.
+// SetTargetGo implements Puts the target C8051Fxxx device in a Run state.
 func SetTargetGo() int32 {
 	setTargetGo, _ := syscall.GetProcAddress(siUtil, "SetTargetGo")
 	num := 0
@@ -253,7 +253,7 @@ func SetTargetGo() int32 {
 	return int32(r)
 }
 
-// SetTargetHalt implements Puts the target C8051Fxxx device in a â€œHaltâ€?state.
+// SetTargetHalt implements Puts the target C8051Fxxx device in a Halt state.
 func SetTargetHalt() int32 {
 	setTargetHalt, _ := syscall.GetProcAddress(siUtil, "SetTargetHalt")
 	num := 0
